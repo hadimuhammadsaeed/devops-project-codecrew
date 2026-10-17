@@ -1,0 +1,15 @@
+# Build output and logs
+out/
+build/
+dist/
+*.log
+
+# Editor and OS files
+*.swp
+.vscode/
+.idea/
+.DS_Store
+
+# Secrets (never commit these)
+.env
+*.pem
