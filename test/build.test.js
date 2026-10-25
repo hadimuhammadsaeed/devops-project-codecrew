@@ -18,9 +18,9 @@ test('every page is real HTML and not raw Markdown', () => {
   }
 });
 
-test('no page is empty', () => {
+test('every page is non-empty', () => {
   for (const p of pages) {
-    const size = fs.statSync('out/' + p).size;
-    assert.ok(size > 0, p + ' is a zero-byte file');
+    const stats = fs.statSync('out/' + p);
+    assert.ok(stats.size > 0, `${p} should not be empty`);
   }
 });
